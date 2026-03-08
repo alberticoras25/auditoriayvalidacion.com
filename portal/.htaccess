@@ -1,0 +1,91 @@
+Options +FollowSymLinks
+
+RewriteEngine On
+RewriteBase /proyectos/iopik/
+#RewriteRule ^index\.php$ - [L]
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteCond %{REQUEST_FILENAME} !-l
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -f [OR]
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -d
+RewriteRule ^ - [L]
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteRule ^(.*[^/])$ /$1/ [L,R] # <- for test, for prod use [L,R=301]
+
+#RewriteCond %{SERVER_PORT} 80
+#RewriteRule ^(.*)$ https://vitafi.mx/$1 [R,L]
+#RewriteRule . /index.php [L]
+#RewriteCond %{HTTPS} !=on
+#RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+#RewriteCond %{SERVER_PORT} 80
+#RewriteRule ^(.*)$ https://www.vitafi.mx/$1 [R,L]
+#RewriteRule ^(.*)$ https://vitafi.mx/$1 [R,L]
+
+AddType text/html .html .htm
+
+#<IfModule mod_headers.c>
+#  <FilesMatch "\.(ttf|ttc|otf|eot|woff|woff2|font.css|css|js)$">
+#    Header set Access-Control-Allow-Origin "*"
+#  </FilesMatch>
+#</IfModule>
+
+<FilesMatch ".(ttf|ttc|otf|eot|woff|woff2|font.css|min.css|css|min.js|js)">
+	Header set Access-Control-Allow-Origin "*"
+</FilesMatch>
+
+#RewriteRule ^(.+)/(css|js)/([^/]+)\.(js|css)$ $2/$3.$4 [R=301,L]
+#RewriteRule ^inicio/$ index.php [L]
+RewriteRule ^inicio/(.*)$ index.php?ciudad=$1 [L]
+RewriteRule ^busqueda/(.*)$ negocios.php [L]
+RewriteRule ^busquedaOld/(.*)$ negociosOld.php [L]
+RewriteRule ^negocios2/$ negocios2.php [L]
+RewriteRule ^nosotros/$ nosotros.php [L]
+RewriteRule ^contacto/$ contacto.php [L]
+RewriteRule ^iniciar-sesion/$ iniciar-sesion.php [L]
+RewriteRule ^registro/$ registro.php [L]
+RewriteRule ^recupera/$ recupera.php [L]
+RewriteRule ^agregar-negocio/$ agregar-negocio.php [L]
+RewriteRule ^terminos-y-condiciones/$ condiciones.php [L]
+RewriteRule ^aviso-legal/$ aviso-legal.php [L]
+RewriteRule ^aviso-de-uso-de-cookies/$ aviso-cookies.php [L]
+RewriteRule ^politicas-de-privacidad/$ politicas-privacidad.php [L]
+RewriteRule ^categorias/(.*)$ busqueda-categorias.php?slug=$1 [L]
+RewriteRule ^agente/(.*)$ agente.php?slug=$1 [L]
+RewriteRule ^negocio/(.*)$ negocio.php?slug=$1 [L]
+RewriteRule ^editar-negocio/(.*)$ editar-negocio.php?idObj=$1 [L]
+RewriteRule ^error/?$ 404.php [L]
+RewriteRule ^bienvenida/(.*)$ bienvenida.php?idUser=$1 [L]
+RewriteRule ^inmobiliarias/$ inmobiliarias.php [L]
+RewriteRule ^agentes/$ agentes.php [L]
+RewriteRule ^proveedores/$ proveedores.php [L]
+RewriteRule ^perfil/$ connect/profile.php [L]
+#RewriteRule ^perfil/$ perfil.php [L]
+RewriteRule ^negocios-usuario/$ negocios-usuario.php [L]
+RewriteRule ^cerrar-sesion/$ cerrar-sesion.php [L]
+RewriteRule ^google-oauth-login/$ google-oauth-login.php [L]
+RewriteRule ^promocion/(.*)$ promocion.php?idPromo=$1 [L]
+RewriteRule ^producto/(.*)$ producto.php?idProd=$1 [L]
+RewriteRule ^productos-servicios/(.*)$ productos-servicios.php [L]
+RewriteRule ^promociones/(.*)$ promociones.php [L]
+RewriteRule ^pedido/$ altaiopik/order.php [L]
+RewriteRule ^directorio/$ connect/directory.php [L]
+RewriteRule ^chat/$ connect/chat.php [L]
+RewriteRule ^archivos/$ connect/files-manager.php [L]
+RewriteRule ^calendario/$ connect/calendar.php [L]
+RewriteRule ^correos/$ connect/mail.php [L]
+RewriteRule ^nueva-sucursal/(.*)$ nueva-sucursal.php?idObj=$1 [L]
+
+RewriteRule ^multipagos/$ multipagos/sistema/index.php [L]
+
+RewriteRule ^embed/(.*)$ embed.php?slug=$1 [L]
+
+RewriteRule ^deletion/(.*)$ app/deletion.php?id=$1 [L]
+RewriteRule ^redirect(.*)$ app/redirectApple.php [L]
+RewriteRule ^menu/(.*)$ menu.php [L]
+
+RewriteRule (.*) /negocio.php?slug=$1 [L]
+
+#RewriteRule ^(.*)$ - [L,R=404]
+ErrorDocument 404 /404.php
+ErrorDocument 500 /500.php

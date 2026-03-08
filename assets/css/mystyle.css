@@ -1,0 +1,81 @@
+@font-face
+{
+    font-family: gmx;
+    src: url(../fonts/GMX/GMX.otf);
+}
+
+header .navbar-brand h6
+{
+    font-family: gmx;
+    color: #fff;
+    font-size: 12px;
+}
+
+header .navbar-brand span
+{
+    padding-top: 5px;
+    font-size: 21px;
+}
+
+.navigation
+{
+    top: 0px !important;
+    background: #13322B !important;
+}
+
+.footer-area
+{
+    background: #13322B !important;
+    padding-top: 0px !important;
+}
+
+.footer-area .footer-copyright
+{
+    margin-top: 0px !important;
+}
+
+#loading
+{
+    background-image: linear-gradient(90deg, #bcbec1 0%, #222933 100%) !important;
+}
+
+.navbar-brand
+{
+    height: 85px !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.navbar-brand h3
+{
+    color: #fff !important;
+}
+
+.services-2-area.services-about .section-title .title,
+.why-choose-area .why-choose-content .content .title,
+.why-choose-area .ql-editor
+{
+    color: #404041 !important;
+    font-family: "Montserrat",Helvetica,Arial,sans-serif !important;
+    font-weight: 600 !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+}
+
+.why-choose-area .ql-editor
+{
+    color: #404041 !important;
+    font-family: "Montserrat",Helvetica,Arial,sans-serif !important;
+    font-weight: 300 !important;
+}
+
+.navbar-toggler
+{
+    display: none !important;
+}
+
+.why-choose-area .why-choose-content .content .title
+{
+    font-size: 36px !important;
+    line-height: 37px !important;
+}

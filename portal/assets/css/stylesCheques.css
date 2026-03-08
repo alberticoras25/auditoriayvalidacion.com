@@ -1,0 +1,29 @@
+@page
+{
+  size: auto;
+  size: landscape;
+  margin: 0mm;
+}
+
+html
+{
+  font-size: 8px !important;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body
+{
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 10px !important;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #000;
+  background-color: #ffffff;
+  text-transform: uppercase !important;
+}
+
+.divCamp
+{
+  position:fixed;
+  border: 1px dashed #000;
+}

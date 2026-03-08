@@ -1,0 +1,161 @@
+html {
+  width: 100%;
+}
+
+body {
+    overflow-x: hidden !important;
+    font-size: 0.9rem !important;
+}
+
+body.show-spinner > main {
+  overflow: hidden !important;
+}
+
+/* Hide everything under body tag */
+body.show-spinner > *{
+  opacity: 0 !important;
+}
+
+/* Spinner */
+body.show-spinner::after{
+  content: " ";
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  border-top-color: rgba(0, 0, 0, 0.3);
+  animation: spin 1s ease-in-out infinite;
+  -webkit-animation: spin 1s ease-in-out infinite;
+  left: calc(50% - 15px);
+  top: calc(50% - 15px);
+  position: fixed;
+  z-index: 1;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+.audios
+{
+  display: none;
+}
+
+.dt-buttons
+{
+  padding-bottom: 1rem !important;
+}
+
+#cargando
+{
+  height: 60px;
+  margin: 25px auto;
+  width: 100%;
+  background:url(../assets/img/global_loader.gif) no-repeat center;
+  background-size: cover;
+}
+
+.divPermisos
+{
+    height: 400px !important;
+}
+
+.divFiltros
+{
+    height: 232px !important;
+}
+
+.tableDays
+{
+  height: 500px !important;
+}
+
+.divSubPermisos
+{
+  height: 100px !important;
+}
+
+.modal-open .select2-container--open
+{
+    z-index: 999999 !important; width:100% !important;
+}
+
+.bs-actionsbox .btn
+{
+    padding: .5rem .1rem !important;
+    font-size: .6rem !important;
+}
+
+.cardNat
+{
+    border: 1px solid #ececec !important;
+    box-shadow: none !important;
+}
+
+.cardForza
+{
+    border: 1px solid #b69329 !important;
+    box-shadow: none !important;
+}
+
+.cardFalta
+{
+  border: 1px solid #c43d4b !important;
+  box-shadow: none !important;
+}
+
+.cardJusty
+{
+    border: 1px solid #131113 !important;
+    box-shadow: none !important;
+}
+
+.cardCap
+{
+    border: 1px solid #3e884f !important;
+    box-shadow: none !important;
+}
+
+/*.dropdown-menu
+{
+    position: fixed !important;
+}*/
+
+.menu .main-menu ul li a
+{
+    font-size: 0.75rem !important;
+}
+
+.btn
+{
+    font-size: 0.8rem !important;
+}
+
+.text-muted
+{
+    font-size: 0.9rem !important;
+}
+
+textarea.form-control
+{
+    font-size: 0.85rem;
+}
+
+.form-control, .bootstrap-tagsinput
+{
+    font-size: 0.85rem;
+}
+
+.color-theme-5
+{
+    color: #3e884f;
+}

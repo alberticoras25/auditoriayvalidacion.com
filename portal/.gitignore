@@ -1,0 +1,9 @@
+.DS_Store
+.vscode
+*.log
+*.iml
+!.gitignore
+*.xml
+/.idea/
+sistema/imagenes/*
+/nbproject/private/
