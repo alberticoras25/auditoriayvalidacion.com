@@ -13,7 +13,7 @@
     if($server == "localhost")
         $txtBase = '/proyectos/valaudita/';
     else
-        $txtBase = 'https://validacionyauditoria.com/';
+        $txtBase = 'https://auditoriayvalidacion.com/';
 
     $valCheckBD = true;
     switch($file)

@@ -15,7 +15,7 @@
             if($server == "localhost")
                 $txtBase = '/proyectos/valaudita/';
             else
-                $txtBase = 'https://validacionyauditoria.com/';
+                $txtBase = 'https://auditoriayvalidacion.com/';
 
             //PREMISOS DE ACCIONES
             liberar_bd();

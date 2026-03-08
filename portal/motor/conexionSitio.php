@@ -1,9 +1,9 @@
 <?php
 	function conectarSistema()
 	{
-		$usuario = "u283966854_usvalau2";
+		$usuario = "u283966854_usvalau3";
 		$pass = "V4liD4ci0N4uDi74";
-		$bd = "u283966854_valaudita2";
+		$bd = "u283966854_valaudita3";
 		$servidor = "localhost";
 
 		$conexion = mysqli_connect($servidor, $usuario, $pass, $bd); 

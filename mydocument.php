@@ -8,7 +8,7 @@
     if($server == "localhost")
         $txtBase = '/proyectos/valaudita/';
     else
-      $txtBase = 'https://validacionyauditoria.com/';
+      $txtBase = 'https://auditoriayvalidacion.com/';
     
     session_start();
     date_default_timezone_set('America/Mexico_City') ;
